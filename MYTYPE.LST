@@ -1,0 +1,58 @@
+Microsoft (R) Macro Assembler Version 5.10                  1/18/18 05:42:48
+                                                             Page     1-1
+
+
+				.model small
+				.data
+ 0000  46 69 6C 65 20 4F	msg1 db 'File Opened$'
+       70 65 6E 65 64 24	
+ 000C  41 2E 54 58 54 00	fname db 'A.TXT',0
+ 0012  0000			fhandle dw ?
+				.code
+ 0000				START:
+ 0000  B8 ---- R		mov ax,@data
+				
+				
+				
+ 0003  B4 4C			mov ah,4ch
+ 0005  CD 21			int 21h
+				end start
+Microsoft (R) Macro Assembler Version 5.10                  1/18/18 05:42:48
+                                                             Symbols-1
+
+
+Segments and Groups:
+
+                N a m e         	Length	 Align	Combine Class
+
+DGROUP . . . . . . . . . . . . .  	GROUP
+  _DATA  . . . . . . . . . . . .  	0014	WORD	PUBLIC	'DATA'
+_TEXT  . . . . . . . . . . . . .  	0007	WORD	PUBLIC	'CODE'
+
+Symbols:            
+
+                N a m e         	Type	 Value	 Attr
+
+FHANDLE  . . . . . . . . . . . .  	L WORD	0012	_DATA
+FNAME  . . . . . . . . . . . . .  	L BYTE	000C	_DATA
+
+MSG1 . . . . . . . . . . . . . .  	L BYTE	0000	_DATA
+
+START  . . . . . . . . . . . . .  	L NEAR	0000	_TEXT
+
+@CODE  . . . . . . . . . . . . .  	TEXT  _TEXT		
+@CODESIZE  . . . . . . . . . . .  	TEXT  0		
+@CPU . . . . . . . . . . . . . .  	TEXT  0101h		
+@DATASIZE  . . . . . . . . . . .  	TEXT  0		
+@FILENAME  . . . . . . . . . . .  	TEXT  myType		
+@VERSION . . . . . . . . . . . .  	TEXT  510		
+
+
+     14 Source  Lines
+     14 Total   Lines
+     20 Symbols
+
+  46442 + 411778 Bytes symbol space free
+
+      0 Warning Errors
+      0 Severe  Errors
